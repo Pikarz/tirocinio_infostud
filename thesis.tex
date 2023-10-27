@@ -1,0 +1,66 @@
+% I seguenti commenti speciali impostano:
+% 1. thesis.tex come documento principale;
+% 2. il controllo ortografico italiano per l'editor.
+
+% !TEX root = thesis.tex
+% !TEX spellcheck = it-IT
+
+\documentclass[italian, noexaminfo]{sapthesis}  % italiano come linguaggio base di Sapthesis, che imposta il liunguaggio dei titoli, capitoli, ecc in italiano.
+
+%**************************************************************
+% Importazione package
+%************************************************************** 
+
+\usepackage[italian]{babel}     % per scrivere in italiano   
+\usepackage{multicol}           % per la suddivisione dei fogli in due colonne
+\usepackage{hyperref}   	    % collegamenti ipertestsuali
+\usepackage{microtype}          % rifinimenti tipografici
+\usepackage{graphicx}           % inserimento immagini
+\usepackage{float}              % per il corretto posizionamento di tabelle, immagini
+\usepackage{paralist}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{enumitem}           % enumerate con indent custom
+\usepackage{amsfonts}           % font matematici come \mathbb
+
+\setlength{\columnsep}{1.2cm}
+
+\title{Applicazione di tecniche di machine learning ai log degli 
+        accessi della piattaforma Infostud per analisi e predizione 
+        di anomalie}
+\author{Anthony Di Pietro}
+\IDnumber{1960447}
+\course{Informatica}
+\courseorganizer{Ingegneria dell'informazione, informatica e statistica}
+\AcademicYear{2022/2023}
+\advisor{Prof. Tolomei Gabriele}
+\coadvisor{Prof. Panizzi Emanuele}
+\copyyear{2023}
+\authoremail{dipietro.1960447@studenti.uniroma1.it}
+
+\begin{document}    
+    \frontmatter
+
+    \maketitle
+    \input{input/start/dedica}                              % dedica
+    \input{input/start/abstract}                            % abstract
+    \input{input/start/acknowledgments}                     % ringraziamenti
+
+    \tableofcontents
+    \mainmatter
+    \input{input/chapters/chapter 1 - introduction.tex}     % introduzione
+    \input{input/chapters/chapter 2 - dataset.tex}          % dataset
+    \input{input/chapters/chapter 3 - methodology.tex}
+    \input{input/chapters/chapter 4 - valuation.tex}
+    \input{input/chapters/chapter 5 - conclusions.tex}      % conclusioni
+
+    \backmatter
+
+    \cleardoublepage
+    \phantomsection
+
+    \input{input/end/bibliography.tex}                      % bibliografia
+
+
+
+\end{document} 
