@@ -1,0 +1,49 @@
+%**************************************************************
+% Metriche di Valutazione
+%**************************************************************
+
+Nel contesto dell'analisi condotta sui dati osservati della piattaforma Infostud, è fondamentale valutare numericamente 
+le soluzioni dei modelli applicati ai fini della valutazione delle loro performance. A tale scopo, vengono utilizzate 
+tre metriche importanti: la precisione (precision), il richiamo (recall) e la F1-score (F1) al fine di misurare 
+l'efficacia delle soluzioni in modo rigoroso. Queste metriche sono essenziali per comprendere in modo completo ed 
+esaustivo l'efficacia degli approcci metodologici applicati.
+
+\subsection{Precisione (Precision)}\label{precision}
+    La precisione è una metrica che misura quanto un modello è accurato nel predire gli esempi positivi, o anomali nel 
+    contesto dell'anomaly detection, rispetto a tutti 
+    i casi che il modello ha classificato come positivi. 
+    Per calcolare la precisione, viene valutata la frazione di predizioni positive fatte dal modello che sono effettivamente 
+    corrette.
+    \[Precision = \frac{TP}{TP+FP}\]\
+    Dove:
+    \begin{enumerate}
+        \item TP (True Positives) rappresenta il numero di casi positivi, o anomali,
+        correttamente classificati dal modello.
+        \item FP (False Positives) sono i casi negativi erroneamente classificati come positivi, o anomali, dal modello.
+    \end{enumerate}
+    La precisione fornisce un riscontro numerico che, se massimizzato, rende il modello affidabile quando afferma 
+    che un caso è positivo. Tuttavia, la precisione da sola potrebbe non fornire una visione completa delle prestazioni 
+    di un modello.
+
+\subsection{Richiamo (Recall)}
+    Il richiamo misura la capacità di un modello di individuare tutti gli esempi positivi correttamente. In altre parole, 
+    indica quanto il modello fornisce soluzioni che correttamente identificano gli esempi positivi. Il richiamo 
+    viene calcolato attraverso la frazione di predizioni positive, o anomale, fatte 
+    dal modello rispetto al totale dei casi positivi effettivi.
+    \[Recall = \frac{TP}{TP+FN}\]
+    Dove:
+    \begin{enumerate}
+        \item TP sono i True Positives, definiti nella \hyperref[precision]{Sottosezione 4.1.1}
+        \item FN (False Negatives) rappresenta il numero di casi positivi, o anomali, erroneamente classificati come negativi 
+              dal modello.
+    \end{enumerate}
+    Un alto valore di richiamo indica che il modello ha un'ottima capacità di individuare gli esempi positivi, ma 
+    non tiene in considerazione il numero di casi falsi positivi.
+
+\subsection{F1-Score (F1)}\label{f1-score}
+    L'F1-score è una metrica che combina la precisione e il richiamo in un valore che tiene conto sia dei falsi positivi 
+    che dei falsi negativi. La metrica bilancia la precisione e il richiamo. La formula per calcolare l'F1-score è 
+    la seguente:
+    \[F1 = \frac{2\cdot Precision \cdot Recall}{Precision+Recall}\]
+    L'F1-score, quindi, mira a cercare un compromesso tra i valori di precisione e richiamo.
+

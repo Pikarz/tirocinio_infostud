@@ -1,0 +1,59 @@
+% !TEX root = ../thesis.tex
+    
+%**************************************************************
+% Abstract
+%**************************************************************
+
+\begin{abstract}
+    Le serie temporali multivariate rappresentano un campo di studio 
+    di notevole rilevanza in svariati sistemi distribuiti in tutto 
+    il mondo. In un certo senso, queste serie di dati delineano 
+    il ciclo di vita del sistema. Si può dunque dedurre che 
+    attraverso le serie temporali vengono modellati sia i periodi 
+    in cui il sistema funziona normalmente, che dualmente i periodi
+    più "anomali".
+
+    L'analisi delle serie temporali multivariate, con l'obiettivo 
+    di identificare e predire anomalie, non deve solamente tener 
+    conto della dipendenza temporale, un problema già complesso di 
+    per sé, ma deve anche considerare la correlazione tra i vari 
+    segnali all'interno del sistema. 
+    
+    Nel corso degli anni, diversi algoritmi sono stati impiegati 
+    per l'analisi di anomalie nelle serie temporali, tra cui 
+    SVM\cite{ocsvm} (Support Vector Machine), ma con risultati insoddisfacenti.
+    Questi modelli presentano una limitazione fondamentale 
+    che compromette la loro efficacia nell'analisi delle serie 
+    temporali: la loro incapacità di catturare la correlazione 
+    temporale, una caratteristica essenziale per condurre 
+    un'analisi accurata di tali serie. Modelli come ARMA\cite{arma}, invece,
+    riescono a catturare la dipendenza temporale, ma sono per natura 
+    monovariati, per cui non sono in grado di osservare l'intercorrelazione 
+    dei segnali.
+
+    La ricerca sull'individuazione delle anomalie, negli anni recenti, ha fatto 
+    molti passi avanti. Algoritmi come Telemanom\cite{telemanom} vengono applicati 
+    a sistemi reali, complessi e delicati con ottimi risultati.
+    
+    L'anno 2019 è stato di particolare interesse per l'analisi di anomalie
+    di serie temporali multivariate, grazie alla pubblicazione 
+    dell'articolo scientifico sul modello Multi-Scale Convolutional 
+    Recurrent Encoder-Decoder\cite{mscred} (MSCRED).
+    MSCRED affronta la necessità di misurare non solo 
+    l'intercorrelazione tra i dati, ma anche la loro dipendenza 
+    temporale.
+
+    In questa tesi, verrà applicato MSCRED su un sistema reale che riveste un ruolo di 
+    straordinaria importanza per tutta la comunità accademica della Sapienza: il 
+    prezioso dataset di Infostud, piattaforma che rappresenta una risorsa inestimabile 
+    per la nostra istituzione, essendo un punto di riferimento fondamentale per 
+    le attività accademiche e amministrative. 
+    
+    Verranno valutate le prestazioni di MSCRED, confrontando i risultati ottenuti 
+    con quelli generati dagli algoritmi OC-SVM, ARMA e Telemanom. È importante 
+    sottolineare che MSCRED, grazie alla sua capacità di analisi delle serie 
+    temporali multivariate, si prevede porterà a risultati notevolmente 
+    superiori rispetto agli altri modelli. Questa analisi rappresenta 
+    un passo significativo verso un possibile miglioramento delle operazioni e 
+    dell'efficienza del sistema Infostud.
+\end{abstract}

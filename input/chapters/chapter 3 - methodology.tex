@@ -1,0 +1,42 @@
+% !TEX root = ../../thesis.tex
+    
+%**************************************************************
+% Methodology
+%*************************************************************
+\chapter{Metodologie di Analisi}
+    Ai fini di valutare le performance delle soluzioni dei vari modelli applicati sul dataset che rappresenta la latenza media 
+    delle richieste a servizi fatti a Infostud, viene proposto l'utilizzo di tre principali approcci metodologici per 
+    l'analisi atta all'individuazione di anomalie nel dataset accademico. Le soluzioni verranno analizzate 
+    in virtù delle etichette dapprima esistenti sul dataset:
+    \begin{enumerate}
+        \item \textbf{Approccio Statistico (Statistical-based):} L'approccio statistico si basa sulla tradizionale 
+              statistica dei dati. In particolare ARMA\cite{arma}, il modello utilizzato per fare inferenza sulle anomalie 
+              del prezioso dataset di Infostud, modella le relazioni temporali nei dati attraverso l'uso dell'autoregressione 
+              e della media mobile, metodi adatti al fine di modellare le relazioni temporali nei dati; il modello 
+              identifica tendenze e autocorrelazioni nelle metriche applicate.
+        \item \textbf{Approccio di Apprendimento Automatico (Machine Learning-based):} Nell'ambito dell'apprendimento automatico, 
+              è stato scelto l'approccio basato sulle Support Vector Machine (SVM). In particolare, la Support Vector 
+              Machine a classe singola (OC-SVM\cite{ocsvm}), un algoritmo che si concentra sull'identificazione di 
+              dati fuori dal normale comportamento in grado di tracciare confini decisionali creando due regioni che 
+              discriminano, nel caso in questione, le anomalie dalle non anomalie.
+        \item \textbf{Approccio di Apprendimento Profondo (Deep Learning-based):} L'apprendimento profondo è particolarmente 
+              efficace nell'affrontare problemi di analisi di dati complessi, come le serie temporali.  
+              Questo approccio vede applicati due modelli molto recenti: Telemanom\cite{telemanom} e Multi-Scale Convolutional 
+              Recurrent Encoder-Decoder (MSCRED\cite{mscred}); entrambi sono modelli basati su reti neurali e sono 
+              progettati con lo specifico obiettivo di individuazione delle anomalie in dati multivariati. 
+    \end{enumerate}
+
+    Ciascuno di questi approcci contribuisce in modo significativo all'analisi del dataset indispensabile per tutta 
+    la comunità Sapienza, fornendo una varietà di strumenti e metodi per esplorare, valutare e interpretare le 
+    informazioni contenute nei dati di Infostud. Nel corso di questo capitolo, verranno esaminate in dettaglio 
+    le soluzioni di ciascuno dei modelli presi in considerazione.
+
+    \section{Approccio Statistico (Statistical-based)}
+        \input{input/chapters/models/arma.tex}
+
+    \section{Approccio di Apprendimento Automatico (Machine Learning-based)}
+        \input{input/chapters/models/ocsvm.tex}
+
+    \section{Approccio di Apprendimento Profondo (Deep Learning-based)}
+        \input{input/chapters/models/telemanom.tex}
+        \input{input/chapters/models/mscred.tex}
