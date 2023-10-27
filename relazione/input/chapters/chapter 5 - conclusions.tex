@@ -1,0 +1,68 @@
+% !TEX root = ../thesis.tex
+    
+%**************************************************************
+% Conclusioni
+%**************************************************************
+
+\chapter{Conclusioni: un passo avanti verso soluzioni migliori}
+        Nell'ambito degli studi affrontati, sono stati esplorati diversi algoritmi per la rilevazione di anomalie 
+        sulla serie temporale multivariata estratta dalla piattaforma indispensabile per tutta la nostra comunità accademica. 
+        Gli esperimenti hanno fornito preziose informazioni sulle prestazioni di 
+        questi algoritmi e sulle loro potenzialità in questo complesso e affascinante dominio di applicazione; tali soluzioni,
+        auspicabilmente, potrebbero essere analizzate per far sì che vi siano miglioramenti sulle operazioni e sul 
+        tempo di risposta e di processamento dei servizi richiesti, potenzialmente garantendo un ambiente migliore a tutti 
+        coloro che, giornalmente, beneficiano della piattaforma universitaria Infostud. 
+        È stato un onore per il sottoscritto poter interagire con dati di tale rilevanza e di così
+        stretto coinvolgimento.
+
+        \paragraph{ARMA: il modello consolidato} Nonostante ARMA\cite{arma} (Auto Regressive Moving Average) non sia stato 
+        originariamente progettato per il rilevamento di anomalie, rimane un pilastro tra gli algoritmi tradizionali. 
+        ARMA è un modello robusto ed efficace, basato su semplici metodi statistici ma adattabile a numerosi contesti della 
+        data science, e dimostra solidità anche nella rilevazione di anomalie.
+
+        \paragraph{OC-SVM: una soluzione sfacciata} L'algoritmo dall'approccio metodologico del machine learning visto 
+        in questi studi è stato OC-SVM\cite{ocsvm}. Sebbene questo algoritmo fosse molto sfavorito per il contesto
+        preso in considerazione, visto l'intrinseco sbilanciamento tra le classi nell'anomaly detection,
+        ha comunque offerto una soluzione degna di interesse. OC-SVM è un algoritmo flessibile e ci ha garantito
+        un'ottima base su cui misurare le performance future.
+
+
+        \paragraph{Telemanom: la non-soluzione} Purtroppo Telemanom\cite{telemanom}, nonostante sia un modello molto recente 
+        che si focalizza sull'anomaly detection attraverso il deep learning, offre una soluzione che overfitta i dati. 
+        L'overfit non è tanto dovuto agli iperparametri, quanto a come il modello gestisce le anomalie e a come 
+        esse sono naturalmente distribuite nel dataset preso in analisi. La soluzione di Telemanom, seppur buona numericamente, 
+        non è da prendere in considerazione.
+
+        \paragraph{MSCRED: un promettente avanzamento} MSCRED\cite{mscred} (Multi-Scale Convolutional Recurrent Encoder-Decoder) 
+        è un modello relativamente giovane che si basa sul deep learning. Le analisi illustrate suggeriscono che MSCRED, grazie 
+        alla sua capacità di catturare l'intercorrelazione tra i segnali e la loro dipendenza temporale, emerge come un 
+        candidato di spicco per futuri sviluppi nel campo dell'anomaly detection. Il modello ha dimostrato ottime 
+        performance senza richiedere un eccessivo tuning degli iperparametri, lasciando intravedere un promettente futuro.
+
+        \paragraph{Riassunto: Le Performance degli Algoritmi} La \hyperref[tab:recap-perf]{Tabella 5.1.} riassume 
+        le performance dei vari algoritmi esaminati mediante le metriche principali prese in considerazione.
+
+
+    \begin{table}[H]
+        \centering
+        \caption{Performance dei modelli analizzati}
+        \begin{tabular}{lcccc}
+        \toprule
+        \textbf{Modello} & \textbf{Precisione} & \textbf{Recall} & \textbf{F1-score} \\
+        \midrule
+        \textbf{OC-SVM} & 0.331 & 0.290 & 0.309 \\
+        \textbf{ARMA} & 0.332 & 0.248 & 0.284 \\
+        \textbf{Telemanom}\footnote{}  & \emph{1.0} & \emph{0.5} & \emph{0.66} \\
+        \textbf{MSCRED} & \textbf{0.711} & \textbf{0.857} & \textbf{0.777} \\
+        \bottomrule
+        \end{tabular}
+        \label{tab:recap-perf}
+    \end{table}
+    
+        \footnotetext{La soluzione non è valida perché il modello non è adatto al contesto di InfoSapienza}
+        \paragraph{Il futuro dell'anomaly detection} L'obiettivo per il futuro che ci attende è quello di sviluppare 
+        soluzioni sempre più accurate, che possano identificare le anomalie nei sistemi complessi attribuendo un valore 
+        numerico che identifichi lo stato, anomalo o meno, del sistema. Ciò garantirà non solo la possibilità di prendere atto 
+        prontamente delle anomalie, ma renderà possibile anche la loro prevenzione, contribuendo così a migliorare 
+        la sicurezza e minimizzando i periodi di down dei sistemi in una varietà di settori industriali, in cui spesso 
+        vi è in ballo anche la vita umana.
